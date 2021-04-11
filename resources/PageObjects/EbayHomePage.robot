@@ -10,16 +10,11 @@ ${SEARCH_BUTTON}  jquery:input[type="submit"]
 
 Access Ebay Homepage
     Go To               ${HOME_URL}
-    Wait Until Element Is Visible  ${SEARCH_BOX}
 
-Type my search "${SEARCH}"
+I search for "${SEARCH}"
     Input Text    ${SEARCH_BOX}    ${SEARCH}
-
-Click search button
     Click Button    ${SEARCH_BUTTON}
-    Set Browser Implicit Wait   10000
-
-
+    Capture Page Screenshot
 
 
 

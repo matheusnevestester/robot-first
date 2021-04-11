@@ -8,9 +8,17 @@ Test Teardown  Closing the Browser
 
 *** Test Case ***
 Ebay simple search
-    Given EbayHomePage.Access Ebay Homepage
-    When EbayHomePage.Type my search "hot wheels"
-    And EbayHomePage.Click search button
-    And EbaySearchPage.Get all item from the search
+    Given Access Ebay Homepage
+    When I search for "hot wheels"
+    And Get all item from the search
+    Then The number of items per page must be correct
+
+Ebay searching first element
+    Given Access Ebay Homepage
+    When I search for "hot wheels"
+    And Search for the first element name
+    Then I must find at least "1" element
+
+
 
 
