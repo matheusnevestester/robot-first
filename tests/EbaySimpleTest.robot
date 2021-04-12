@@ -10,7 +10,6 @@ Test Teardown  Closing the Browser
 Ebay simple search
     Given Access Ebay Homepage
     When I search for "hot wheels"
-    And Get all item from the search
     Then The number of items per page must be correct
 
 Ebay searching first element
@@ -18,6 +17,11 @@ Ebay searching first element
     When I search for "hot wheels"
     And Search for the first element name
     Then I must find at least "1" element
+
+Ebay printing products name
+    Given Access Ebay Homepage
+    When I search for "hot wheels"
+    Then The elements names should be printed in the log
 
 
 
